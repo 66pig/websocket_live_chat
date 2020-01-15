@@ -1,37 +1,49 @@
 # WebSocket实时聊天交互核心功能封装
 
 #### 介绍
-用ws封装的一个实时通信交互工具
+- 用ws封装的一个实时通信交互工具
 
 #### 软件架构
-软件架构说明
+- 软件架构说明
 
 
-#### 安装教程
+#### 服务端安装教程
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+1. npm install
+2. node socket.js
 
 #### 使用说明
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+1.  服务端必须要在nodejs环境下进行操作，客户端无限制
+2.  可以直接在socket.js文件中修改返回码
 
-#### 参与贡献
+#### 返回码说明
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+- 101: 登陆成功
+
+- 2xxx表示系统广播
+- 2101: 有用户上线
+- 2102: 有用户离线
+
+- 1xxx表示命令请求
+- 11xx表示主动请求
+- 12xx 或者 1x2x 表示被动
+- 1101: 用户列表查询结果
+- 1111: 接听了
+- 1112: 拒绝了接听
+- 1221: 被接听
+- 1222: 被拒接
+- 1102: 正在呼叫
+- 1200: 正在被呼叫
+- 1115: 主动挂断
+- 1225: 被挂断了（也可能是对方掉线了）
 
 
-#### 码云特技
+- ws方法说明：
+- cmd
+    1. 查询类命令只需要传入cmd即可；
+    2. 与另一个用户进行交互，则需要传入地方的uid即clientid->cid
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  码云官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解码云上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是码云最有价值开源项目，是码云综合评定出的优秀开源项目
-5.  码云官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  码云封面人物是一档用来展示码云会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+- watching
+    1. 监听服务端的响应，并通过返回值作出对应响应
+
