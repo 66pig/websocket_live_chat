@@ -8,7 +8,7 @@
 
 ### 使用截图
 
-![软件运行截图](https://nunini-dataset-public.oss-cn-beijing.aliyuncs.com/p2.nunini.com/images/p2_example_snapshot.png "演示二维码")
+![软件运行截图](https://nunini-dataset-public.oss-cn-beijing.aliyuncs.com/p2.nunini.com/images/p2_example_snapshot.png "软件运行截图")
 
 
 ### 演示
