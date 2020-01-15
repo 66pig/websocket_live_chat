@@ -24,7 +24,6 @@
 <script type="text/javascript">
 
     // 随机生成uid，正式使用时可以自己设置生成方式，uid可以是字符串可以是数字
-    // 数字最终也是被自动转为字符串
     var uid = Math.round(Math.random() * 1000)
 
     // 在dom中展示一下自己的uid
@@ -93,6 +92,9 @@
                 handleCMD({cmd: 'closed', cid: res.cid})
                 document.querySelector('.closed-btn').onclick = null
             }
+        } else if (res.code == 1101) {
+            // 监听所有用户通知列表
+            console.log(res.msg, res.data)
         }
     })
 </script>
